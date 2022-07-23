@@ -1,1 +1,2 @@
-console.log("hello Evans");
+import "./css/public.css";
+import "./css/index.css";
