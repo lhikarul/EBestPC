@@ -10,9 +10,9 @@
           <div class="fr clearfix" id="top1">
             <p class="fl">
               <!-- SPA -->
-              <!-- <a id="login" @click="jumpToLogin">登录</a>  -->
+              <a id="login" @click="jumpToLogin">登录</a>
               <!-- MPA SSR -->
-              <a href="login.html" id="login">登录</a>
+              <!-- <a href="login.html" id="login">登录</a> -->
               <a href="#" id="reg">注册</a>
             </p>
             <form action="#" method="get" class="fl">
@@ -433,6 +433,7 @@
 </template>
 
 <script>
+import { useRouter } from "vue-router";
 import "./css/public.css";
 import "./css/index.css";
 
@@ -440,11 +441,14 @@ import "jquery";
 import "./js/public";
 import "./js/nav";
 export default {
-  methods: {
-    jumpToLogin() {
-      console.log("hello");
-      this.$router.push("/login");
-    },
+  setup() {
+    const router = useRouter();
+    const jumpToLogin = () => {
+      router.push("/login");
+    };
+    return {
+      jumpToLogin,
+    };
   },
 };
 </script>
