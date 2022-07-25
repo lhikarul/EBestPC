@@ -9,7 +9,10 @@
           </h1>
           <div class="fr clearfix" id="top1">
             <p class="fl">
-              <a id="login" @click="jumpToLogin">登录</a>
+              <!-- SPA -->
+              <!-- <a id="login" @click="jumpToLogin">登录</a>  -->
+              <!-- MPA SSR -->
+              <a href="login.html" id="login">登录</a>
               <a href="#" id="reg">注册</a>
             </p>
             <form action="#" method="get" class="fl">
